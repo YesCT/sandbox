@@ -1,7 +1,7 @@
 <?php
 // src/Sonata/Bundle/DemoBundle/Controller/CRUDController.php
 
-namespace Sonata\DemoBundle\Controller;
+namespace Sonata\Bundle\DemoBundle\Controller;
 
 use Sonata\AdminBundle\Controller\CRUDController as Controller;
 use Symfony\Component\HttpFoundation\RedirectResponse;
