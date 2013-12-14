@@ -11,3 +11,4 @@ vendor
 .idea
 nbproject
 composer.phar
+bin/webunit
