@@ -12,6 +12,7 @@
 namespace Sonata\Bundle\DemoBundle\Admin;
 
 use Sonata\AdminBundle\Admin\Admin;
+use Sonata\AdminBundle\Route\RouteCollection;
 use Sonata\AdminBundle\Show\ShowMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
@@ -45,6 +46,13 @@ class CarAdmin extends Admin
             ->add('engine')
             ->add('rescueEngine')
             ->add('createdAt')
+            ->add('_action', 'actions', array(
+                'actions' => array(
+                    'Clone' => array(
+                        'template' => 'SonataDemoBundle:CRUD:list__action_clone.html.twig'
+                    )
+                )
+            ))
         ;
     }
 
@@ -72,5 +80,10 @@ class CarAdmin extends Admin
             ->add('rescueEngine')
             ->add('createdAt')
         ;
+    }
+
+    protected function configureRoutes(RouteCollection $collection)
+    {
+        $collection->add('clone', $this->getRouterIdParameter().'/clone');
     }
 }
