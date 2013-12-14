@@ -9,7 +9,7 @@
 
             <argument />
             <argument>Sonata\Bundle\DemoBundle\Entity\Car</argument>
-            <argument>Sonata\Bundle\DemoBundle:CRUD</argument>
+            <argument>SonataDemoBundle:CRUD</argument>
 
             <call method="setSubClasses">
                 <argument type="collection">
